@@ -1,0 +1,40 @@
+#Format:
+# - SLOT INDEX: PIN INDEX
+SelectPins:
+  - 1: 1
+  - 2: 2
+  - 3: 3
+  - 4: 4
+#Format:
+# - SLOT INDEX: PIN INDEX
+DetectPins:
+  - 1: 5
+  - 2: 6
+  - 3: 7
+  - 4: 8
+
+#Format:
+# - BINARY PLACE VALUE : PIN INDEX
+LowMuxPins:
+  - 1 : 1
+  - 2 : 2
+  - 4 : 4
+  - 8 : 8
+  - 16 : 16
+  - 32 : 32
+
+#The pin that pulls the low side mux low
+LowMuxEnPin : 1
+
+#Format:
+# - BINARY PLACE VALUE : PIN INDEX
+HighMuxPins:
+  - 1 : 1
+  - 2 : 2
+  - 4 : 4
+  - 8 : 8
+  - 16 : 16
+  - 32 : 32
+
+#Pin that pulls high side mux high
+HighMuxEnPin : 1

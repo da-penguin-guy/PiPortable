@@ -1,0 +1,20 @@
+Apps:
+- Type: "python"
+  Location: "CableTester.py"
+  Icon: 'Icons\CableIcon.png'
+  Name: "Cable Tester"
+
+ErrorIconPath: 'Icons\ErrorIcon.pngErrorIcon.png'
+
+#Format is
+#- "Font Name" (String)
+#- Font Size (Int)
+TitleFont:
+- "Ariel"
+- 50
+
+LabelFont:
+- "Ariel"
+- 30
+
+

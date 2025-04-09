@@ -1,0 +1,4 @@
+BitLookup:
+  00000000:
+    File: "IoCards.AudioCards.AudioCard"
+    TypeName: AudioCard
