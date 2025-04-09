@@ -18,7 +18,6 @@ class IoTypes(Enum):
 class IoCard:
     """
     A card that goes into any of the 4 IO Slots
-    Attributes: 
     """
     slotIndex : int
     isI2C : bool

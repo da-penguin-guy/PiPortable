@@ -4,7 +4,7 @@ Apps:
   Icon: 'Icons\CableIcon.png'
   Name: "Cable Tester"
 
-ErrorIconPath: 'Icons\ErrorIcon.pngErrorIcon.png'
+ErrorIconPath: 'Icons\ErrorIcon.png'
 
 #Format is
 #- "Font Name" (String)

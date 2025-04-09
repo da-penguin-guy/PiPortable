@@ -9,7 +9,7 @@ except ImportError:
 
 
 def ImportYaml(path : str):
-    return yaml.load(open(path, 'r'),Loader)
+    return yaml.safe_load(open(path, 'r'))
 
 def ImportImage(path: str) -> Image.Image:
     """
