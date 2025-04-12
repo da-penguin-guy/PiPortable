@@ -1,6 +1,6 @@
 import os
 import subprocess
-import Functions.Helper as help
+import Helper as help
 import customtkinter as ctk
 
 

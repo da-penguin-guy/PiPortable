@@ -1,10 +1,10 @@
 Apps:
 - Type: "python"
   Location: "CableTester.py"
-  Icon: 'Icons\CableIcon.png'
+  Icon: 'Icons/CableIcon.png'
   Name: "Cable Tester"
 
-ErrorIconPath: 'Icons\ErrorIcon.png'
+ErrorIconPath: 'Icons/ErrorIcon.png'
 
 #Format is
 #- "Font Name" (String)

@@ -1,5 +1,5 @@
 import os
-import Functions.Helper as help
+import Helper as help
 import customtkinter as ctk
 import Io.IoManager as IO
 #Set Directory
