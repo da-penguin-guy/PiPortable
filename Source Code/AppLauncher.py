@@ -5,7 +5,7 @@ import customtkinter as ctk
 
 
 #Setting CD because python is stupid
-os.chdir(os.path.abspath(os.path.dirname(__file__)))
+scriptDir = os.path.abspath(os.path.dirname(__file__))
 
 #Importing Yaml
 yamlData = help.ImportYaml("AppConfig.yaml")
