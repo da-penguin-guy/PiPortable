@@ -8,19 +8,39 @@ try:
 except ImportError:
     from yaml import Loader, Dumper
 
+ImportedYaml = {}
 
-def ImportYaml(path : str, scriptDirectory : str = "") -> dict:
+def GetYaml(path : str):
+    """
+    Trys to get yaml from memory. If it has not been loaded yet, it will be loaded and saved
+
+    :param path: The relative path of the YAML file
+    :param scriptDirectory: An optional directory joined with path to find an absolute path
+
+    :return: YAML Dictonary
+    """
+    try:
+        return ImportedYaml[path]
+    except:
+        ImportedYaml[path] = newYaImportYaml(path)
+        return ImportedYaml[path]
+
+def GetAbsPath(path):
+    """
+    Gets the absolute path of the directory the file is in
+    """
+    return os.path.join(os.path.abspath(os.path.dirname(__file__)), path)
+
+def ImportYaml(path : str) -> dict:
     """
     Loads YAML data based on a relative path
 
     :param path: The relative path of the YAML file
     :param scriptDirectory: An optional directory joined with path to find an absolute path
 
-    :return: YAML Dictornary
+    :return: YAML Dictonary
     """
-    if(scriptDirectory != ""):
-        path = os.path.join(scriptDirectory, path)
-    with open(path, "r") as file:
+    with open(GetAbsPath(path), "r") as file:
         return yaml.safe_load(file)
 
 def ImportImage(path: str) -> Image.Image:
@@ -33,15 +53,16 @@ def ImportImage(path: str) -> Image.Image:
     """
     try:
         # Try to open the primary image
-        image = Image.open(image_path)
+        image = Image.open(GetAbsPath(path))
         image.load()  # Ensure the image is fully loaded
         print("Loaded primary image successfully.")
         return image
     except Exception as e:
         print(f"Failed to load primary image: {e}")
         try:
+            GetYaml("AppConfig.yaml")
             # Try to open the Error image
-            fallback_image = Image.open(yamlData["ErrorIconPath"])
+            fallback_image = Image.open(GetAbsPath(yamlData["ErrorIconPath"]))
             fallback_image.load()
             print("Loaded error image successfully.")
             return fallback_image

@@ -7,7 +7,9 @@ import Functions.Helper as help
 IoSlotList = [None,None,None,None]
 
 def InitGPIO():
-    yamlData = help.ImportYaml("IoConfig.yaml")
+    #This should be the first time getYaml is called, so make sure it's in the right directory
+    yamlData = help.GetYaml("Io\IoConfig.yaml")
+    #Set all the modes for gpio
     GPIO.setmode(GPIO.BCM)
     for pin in yamlData["SelectPins"].values():
         GPIO.setup(pin, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
@@ -16,10 +18,10 @@ def InitGPIO():
 
     
 def IsCardIn(slot) -> bool:
+    #Checks if card is out of index
     if slot > 3 or slot < 0:
         raise IndexError(f"{slot} is out of range")
-    
-    yamlConfig = help.ImportYaml("Io\IoConfig.yaml")
+    yamlConfig = help.GetYaml("Io\IoConfig.yaml")
     #Looks to see if pin is pulled high
     return GPIO.input(yamlConfig["DetectPins"][slot])
 
@@ -31,7 +33,7 @@ def GetCurrentIO(cardIndex: int) -> Card.IoCard:
     #NOTE: find way to double check info is not outdated
     if not IoSlotList[cardIndex] == None:
         return IoSlotList[cardIndex]
-    yamlConfig = help.ImportYaml("Io\IoConfig.yaml")
+    yamlConfig = help.GetYaml("Io\IoConfig.yaml")
     #Looks up ID pin
     csPin = yamlConfig["SelectPins"][cardIndex]
     #Config SPI

@@ -3,10 +3,9 @@ import Helper as help
 import customtkinter as ctk
 import Io.IoManager as IO
 #Set Directory
-os.chdir(os.path.abspath(os.path.dirname(__file__)))
 ctk.set_appearance_mode("system")
 ctk.set_default_color_theme("blue")
-yamlData = help.ImportYaml("AppConfig.yaml")
+yamlData = help.GetYaml("AppConfig.yaml")
 # Boilerplate
 window = ctk.CTk()
 window.geometry("1280x720")

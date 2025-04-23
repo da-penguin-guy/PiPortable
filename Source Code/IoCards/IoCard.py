@@ -1,4 +1,4 @@
-from Functions.Helper import *
+import Helper as help
 import importlib
 from enum import Enum
 
@@ -37,15 +37,17 @@ class IoCard:
         """
         Gets IO Card information from data on EEPROM
         """
-        yamlData = ImportYaml("IoCards\IoCatagories.yaml")
-        #First byte is the Catagory Byte
-        #try:
-        cardInfo = yamlData["BitLookup"][bytes[0]]
-        #Import Library from path provided
-        module = importlib.import_module(cardInfo["File"])
-        print(module)
-        #Get class from string
-        cardType = getattr(module, cardInfo["TypeName"])
-        return cardType.FindFromData(bytes,cardSlot)
-        #except:
-            #raise NotImplementedError("No IO Card found matches that ID")
+        try:
+            yamlData = help.GetYaml("IoCards\IoCatagories.yaml")
+            #First byte is the Catagory Byte
+            #try:
+            cardInfo = yamlData[bytes[0]]
+            #Import Library from path provided
+            module = importlib.import_module(help.GetAbsPath(cardInfo["File"]))
+            print(module)
+            #Get class from string
+            cardType = getattr(module, cardInfo["TypeName"])
+            return cardType.FindFromData(bytes,cardSlot)
+        except:
+            print("No IO Card found matches that ID")
+            return None

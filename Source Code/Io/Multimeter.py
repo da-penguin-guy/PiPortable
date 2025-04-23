@@ -8,7 +8,7 @@ def HighMuxSelect(index : int, yamlData : str = ""):
     """
     if(yamlData == ""):
         #Imports YAML
-        yamlData = help.ImportYaml("Io\IoConfig.yaml")
+        yamlData = help.GetYaml("Io\IoConfig.yaml")
     #Loops through every value in pin dictonary
     for place, pin in yamlData["HighMuxPins"].items():
         #Sets output based on bitmask
@@ -20,7 +20,7 @@ def LowMuxSelect(index : int, yamlData : str = ""):
     """
     if(yamlData == ""):
         #Imports YAML
-        yamlData = help.ImportYaml("Io\IoConfig.yaml")
+        yamlData = help.GetYaml("Io\IoConfig.yaml")
     #Loops through every value in pin dictonary
     for place, pin in yamlData["LowMuxPins"].items():
         #Sets output based on bitmask
@@ -32,7 +32,7 @@ def PullHigh(value : bool, yamlData : str = ""):
     """
     if(yamlData == ""):
         #Imports YAML
-        yamlData = help.ImportYaml("Io\IoConfig.yaml")
+        yamlData = help.GetYaml("Io\IoConfig.yaml")
     GPIO.output(yamlData["HighEnPin"],value)
 
 def PullLow(value : bool, yamlData : str = ""):
@@ -41,7 +41,7 @@ def PullLow(value : bool, yamlData : str = ""):
     """
     if(yamlData == ""):
         #Imports YAML
-        yamlData = help.ImportYaml("Io\IoConfig.yaml")
+        yamlData = help.GetYaml("Io\IoConfig.yaml")
     GPIO.output(yamlData["LowEnPin"],value)
 
 def ReadVoltage():
@@ -51,7 +51,7 @@ def ReadAmp():
     raise NotImplementedError()
 
 def ReadOhm():
-    yamlData = help.ImportYaml("Io\IoConfig.yaml")
+    yamlData = help.GetYaml("Io\IoConfig.yaml")
     PullHigh(True,yamlData)
     PullLow(True,yamlData)
 
@@ -66,7 +66,7 @@ def ReadOhm():
     return r2
 
 def ReadContinuity():
-    yamlData = help.ImportYaml("Io\IoConfig.yaml")
+    yamlData = help.GetYaml("Io\IoConfig.yaml")
     PullHigh(True,yamlData)
     PullLow(True,yamlData)
     #Read value here
