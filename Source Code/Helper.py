@@ -14,7 +14,7 @@ def GetYaml(path : str):
     """
     Trys to get yaml from memory. If it has not been loaded yet, it will be loaded and saved
 
-    :param path: The relative path of the YAML file
+    :param path: The relative path of the YAML file from Helper.py
     :param scriptDirectory: An optional directory joined with path to find an absolute path
 
     :return: YAML Dictonary
@@ -25,7 +25,7 @@ def GetYaml(path : str):
         ImportedYaml[path] = newYaImportYaml(path)
         return ImportedYaml[path]
 
-def GetAbsPath(path):
+def GetAbsPath(path : os.path) -> os.path:
     """
     Gets the absolute path of the directory the file is in
     """
@@ -33,9 +33,9 @@ def GetAbsPath(path):
 
 def ImportYaml(path : str) -> dict:
     """
-    Loads YAML data based on a relative path
+    Loads YAML data based on a relative path from Helper.py
 
-    :param path: The relative path of the YAML file
+    :param path: The relative path of the YAML file from Helper.py
     :param scriptDirectory: An optional directory joined with path to find an absolute path
 
     :return: YAML Dictonary
@@ -45,9 +45,9 @@ def ImportYaml(path : str) -> dict:
 
 def ImportImage(path: str) -> Image.Image:
     """
-    Load an PNG image based on relative path
+    Load an PNG image based on relative path from Helper.py
 
-    :param image_path: Relative path to the primary image to load
+    :param path: Relative path to the primary image to load
 
     :return: PIL Image object
     """
@@ -106,7 +106,7 @@ def ConvertIcon(path: str, imageSize:tuple[int,int] = (100,100), lightColor:tupl
     """
     Imports a CTK image. Automatically recolors image to fit light and dark mode
 
-    :param path: Path of the image file. PNG is the only image type tested
+    :param path: Path of image file relative to Helper.py. PNG is the only image type tested
     :param imageSize: The size of the image displayed. The format is (Width, Height).The default is (100,100)
     :param lightColor: The color the light mode icon should be recolored to. The format is (r,g,b), 0-255. Default is (0,0,0) aka black
     :param darkColor: The color the dark mode icon should be recolored to. The format is (r,g,b), 0-255. Default is (255,255,255) aka white
