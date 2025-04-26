@@ -1,4 +1,4 @@
-from ..AudioCards.AudioCard import *
+from AudioCard import *
 
 class XlrCard(AudioCard):
     def __init__(self, slotIndex : int, isIn : IoTypes = True, I2CAdr : int = None, usbID : int = None):

@@ -4,11 +4,8 @@ import Helper as help
 import customtkinter as ctk
 
 
-#Setting CD because python is stupid
-os.chdir(os.path.abspath(os.path.dirname(__file__)))
-
 #Importing Yaml
-yamlData = help.ImportYaml("AppConfig.yaml")
+yamlData = help.GetYaml("AppConfig.yaml")
 #Setting apperance
 ctk.set_appearance_mode("system")
 ctk.set_default_color_theme("blue")

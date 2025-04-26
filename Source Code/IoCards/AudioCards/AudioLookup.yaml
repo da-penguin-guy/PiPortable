@@ -1,4 +1,3 @@
-BitLookup:
-  00000000:
-    File: 'IoCards.AudioCards.XlrCard'
-    TypeName: XlrCard
+00000000:
+  File: 'IoCards.AudioCards.XlrCard'
+  TypeName: XlrCard

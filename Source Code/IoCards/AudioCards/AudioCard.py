@@ -16,14 +16,15 @@ class AudioCard(IoCard):
         """
         Gets IO Card information from data on EEPROM
         """
-        yamlData = ImportYaml("IoCards/AudioCards/AudioLookup.yaml")
-        #try:
-        cardInfo = yamlData["BitLookup"][bytes[1]]
-        #Import Library from path provided
-        module = importlib.import_module(cardInfo["File"])
-        print(module)
-        #Get class from string
-        cardType = getattr(module, cardInfo["TypeName"])
-        return cardType.FindFromData(bytes,cardSlot)
-        #except:
-            #raise NotImplementedError("No Audio Card found matches that ID")
+        try:
+            yamlData = help.getYaml("IoCards/AudioCards/AudioLookup.yaml")
+            #try:
+            cardInfo = yamlData[bytes[1]]
+            #Import Library from path provided
+            module = importlib.import_module(help.GetAbsPath(cardInfo["File"]))
+            print(module)
+            #Get class from string
+            cardType = getattr(module, cardInfo["TypeName"])
+            return cardType.FindFromData(bytes,cardSlot)
+        except:
+            raise NotImplementedError("No Audio Card found matches that ID")
