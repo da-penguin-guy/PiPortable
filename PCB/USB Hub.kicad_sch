@@ -5,6 +5,108 @@
 	(uuid "7997499f-88db-4031-9120-ab9e8cd50ea5")
 	(paper "A4")
 	(lib_symbols
+		(symbol "Connector:TestPoint_Small"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.762) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint_Small"
+				(at 0 2.032 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TestPoint_Small_0_1"
+				(circle
+					(center 0 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_Small_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 0)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Device:Crystal_GND24"
 			(pin_names
 				(offset 1.016) hide)
@@ -1402,6 +1504,12 @@
 		(uuid "13e50353-e331-40cd-a6f6-34a53d08c719")
 	)
 	(junction
+		(at 139.7 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2dad61d5-0c7e-4ac5-9c09-d164c2cf3db2")
+	)
+	(junction
 		(at 129.54 50.8)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1419,11 +1527,17 @@
 		(color 0 0 0 0)
 		(uuid "9e54993d-a4c2-4144-ab30-5bc6498e2c8f")
 	)
-	(junction
-		(at 139.7 50.8)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "bb66cb4f-92c9-4f1b-984d-0f16a5bf08b0")
+	(no_connect
+		(at 104.14 99.06)
+		(uuid "2d0b5133-5ce5-41f8-bf0f-670d575434ad")
+	)
+	(no_connect
+		(at 104.14 101.6)
+		(uuid "9a01b5d3-5905-4980-80a4-27e46804f2b7")
+	)
+	(no_connect
+		(at 104.14 81.28)
+		(uuid "e742f0c0-c50b-4f8d-a11e-55a28b707add")
 	)
 	(wire
 		(pts
@@ -1444,6 +1558,16 @@
 			(type default)
 		)
 		(uuid "0ca2711b-b5bb-4d5b-926e-14138b168327")
+	)
+	(wire
+		(pts
+			(xy 87.63 111.76) (xy 104.14 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "152dc581-d0d3-47b3-bd4c-9ada1b407141")
 	)
 	(wire
 		(pts
@@ -1507,6 +1631,16 @@
 	)
 	(wire
 		(pts
+			(xy 87.63 109.22) (xy 104.14 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aeecbafe-6d78-4da0-a2c7-78f3b0b1b98f")
+	)
+	(wire
+		(pts
 			(xy 129.54 50.8) (xy 132.08 50.8)
 		)
 		(stroke
@@ -1525,9 +1659,9 @@
 		)
 		(uuid "ec67af7d-9803-4c04-b0a7-ccc5f1c669b1")
 	)
-	(global_label "SCL"
+	(hierarchical_label "SCL"
 		(shape input)
-		(at 104.14 109.22 180)
+		(at 87.63 109.22 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1535,39 +1669,7 @@
 			)
 			(justify right)
 		)
-		(uuid "d6b14539-1be7-4632-9b21-1a64873c9074")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 97.6472 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "SDA"
-		(shape input)
-		(at 104.14 111.76 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "e0bb655f-dd2b-4741-bd44-3a5109cfd833")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 97.5867 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
+		(uuid "1c50a47d-842d-49bb-9c3d-51014852afac")
 	)
 	(hierarchical_label "D4-"
 		(shape input)
@@ -1628,6 +1730,18 @@
 			(justify left)
 		)
 		(uuid "b70f63c2-def1-48d9-a597-9c68b53595fa")
+	)
+	(hierarchical_label "SDA"
+		(shape input)
+		(at 87.63 111.76 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "bceac12e-c2e0-44cc-8ddb-1c4afd27c262")
 	)
 	(hierarchical_label "D3+"
 		(shape input)
@@ -1699,7 +1813,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "143c88e3-5fc9-4553-ab47-9726b02ed00c")
-		(property "Reference" "#PWR072"
+		(property "Reference" "#PWR076"
 			(at 166.37 109.22 0)
 			(effects
 				(font
@@ -1750,7 +1864,143 @@
 		(instances
 			(project "CM5IO"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/306ba284-8148-4a62-b367-304145c5b054/efc43235-e9ab-4893-9e86-496f99824831"
-					(reference "#PWR072")
+					(reference "#PWR076")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 160.02 111.76 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "149b4abe-f2c6-4d92-8839-702a033b1db7")
+		(property "Reference" "TP1"
+			(at 165.862 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 158.75 113.0299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 154.94 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 154.94 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 160.02 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ad444c64-8ceb-4006-bd8c-b711c7df77e0")
+		)
+		(instances
+			(project "PiPortable"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/306ba284-8148-4a62-b367-304145c5b054/efc43235-e9ab-4893-9e86-496f99824831"
+					(reference "TP1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 104.14 66.04 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "21d80b7b-258f-45c2-b436-1101c85897ba")
+		(property "Reference" "#PWR068"
+			(at 107.95 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 100.33 66.0399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 104.14 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 104.14 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 104.14 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e472e7ed-596c-4aa3-a371-4524aac5783f")
+		)
+		(instances
+			(project "PiPortable"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/306ba284-8148-4a62-b367-304145c5b054/efc43235-e9ab-4893-9e86-496f99824831"
+					(reference "#PWR068")
 					(unit 1)
 				)
 			)
@@ -1766,7 +2016,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2e32f513-a598-4e90-a17a-6f84ed72c355")
-		(property "Reference" "#PWR069"
+		(property "Reference" "#PWR073"
 			(at 71.12 92.71 0)
 			(effects
 				(font
@@ -1817,7 +2067,7 @@
 		(instances
 			(project "CM5IO"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/306ba284-8148-4a62-b367-304145c5b054/efc43235-e9ab-4893-9e86-496f99824831"
-					(reference "#PWR069")
+					(reference "#PWR073")
 					(unit 1)
 				)
 			)
@@ -1831,10 +2081,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "33e10893-6b77-4e42-8ee7-8fab4d7186e0")
-		(property "Reference" "R13"
-			(at 95.25 80.01 90)
+		(property "Reference" "R8"
+			(at 95.25 81.28 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1842,14 +2091,14 @@
 			)
 		)
 		(property "Value" "12kΩ"
-			(at 95.25 82.55 90)
+			(at 95.25 83.82 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 95.504 85.344 90)
 			(effects
 				(font
@@ -1885,7 +2134,7 @@
 		(instances
 			(project "CM5IO"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/306ba284-8148-4a62-b367-304145c5b054/efc43235-e9ab-4893-9e86-496f99824831"
-					(reference "R13")
+					(reference "R8")
 					(unit 1)
 				)
 			)
@@ -1901,7 +2150,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3987b8c0-9787-45aa-a8d7-b89a4a93f547")
-		(property "Reference" "#PWR071"
+		(property "Reference" "#PWR075"
 			(at 166.37 96.52 0)
 			(effects
 				(font
@@ -1952,7 +2201,7 @@
 		(instances
 			(project "CM5IO"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/306ba284-8148-4a62-b367-304145c5b054/efc43235-e9ab-4893-9e86-496f99824831"
-					(reference "#PWR071")
+					(reference "#PWR075")
 					(unit 1)
 				)
 			)
@@ -2042,7 +2291,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4a5d061f-5574-46a1-b67f-e2f4cca43311")
-		(property "Reference" "#PWR068"
+		(property "Reference" "#PWR072"
 			(at 85.09 86.36 0)
 			(effects
 				(font
@@ -2093,7 +2342,142 @@
 		(instances
 			(project "CM5IO"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/306ba284-8148-4a62-b367-304145c5b054/efc43235-e9ab-4893-9e86-496f99824831"
-					(reference "#PWR068")
+					(reference "#PWR072")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 160.02 86.36 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4ebe53ed-0f89-4e5c-aac8-6753c1d9e2dd")
+		(property "Reference" "TP23"
+			(at 165.862 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 158.75 87.6299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 154.94 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 154.94 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 160.02 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "762fd868-ee0d-414d-b66d-24c028f2390d")
+		)
+		(instances
+			(project "PiPortable"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/306ba284-8148-4a62-b367-304145c5b054/efc43235-e9ab-4893-9e86-496f99824831"
+					(reference "TP23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 139.7 50.8 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "54ce18f6-b80f-46a1-95ea-c5f475b010d4")
+		(property "Reference" "#PWR067"
+			(at 139.7 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 139.7 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 139.7 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 139.7 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 139.7 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6e481437-548e-4a3c-b201-84eb0a2ab6da")
+		)
+		(instances
+			(project "PiPortable"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/306ba284-8148-4a62-b367-304145c5b054/efc43235-e9ab-4893-9e86-496f99824831"
+					(reference "#PWR067")
 					(unit 1)
 				)
 			)
@@ -2109,7 +2493,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "54d769ca-2cb1-40ef-8445-58d2c33df47a")
-		(property "Reference" "#PWR070"
+		(property "Reference" "#PWR074"
 			(at 93.98 92.71 0)
 			(effects
 				(font
@@ -2160,7 +2544,7 @@
 		(instances
 			(project "CM5IO"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/306ba284-8148-4a62-b367-304145c5b054/efc43235-e9ab-4893-9e86-496f99824831"
-					(reference "#PWR070")
+					(reference "#PWR074")
 					(unit 1)
 				)
 			)
@@ -2176,7 +2560,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "57db4a7a-f093-41bc-864e-e20c5ed0d7e4")
-		(property "Reference" "U16"
+		(property "Reference" "U7"
 			(at 134.2741 127 0)
 			(effects
 				(font
@@ -2335,7 +2719,75 @@
 		(instances
 			(project "CM5IO"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/306ba284-8148-4a62-b367-304145c5b054/efc43235-e9ab-4893-9e86-496f99824831"
-					(reference "U16")
+					(reference "U7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 104.14 78.74 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "84e166bf-a782-4d1f-9247-82603196808f")
+		(property "Reference" "#PWR070"
+			(at 107.95 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 100.33 78.7399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 104.14 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 104.14 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 104.14 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "23f11f59-d938-4f64-a643-7e8574184a19")
+		)
+		(instances
+			(project "PiPortable"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/306ba284-8148-4a62-b367-304145c5b054/efc43235-e9ab-4893-9e86-496f99824831"
+					(reference "#PWR070")
 					(unit 1)
 				)
 			)
@@ -2351,7 +2803,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "93709585-7d86-4a05-8285-9b7b5d0583c4")
-		(property "Reference" "#PWR065"
+		(property "Reference" "#PWR069"
 			(at 166.37 71.12 0)
 			(effects
 				(font
@@ -2402,33 +2854,24 @@
 		(instances
 			(project "CM5IO"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/306ba284-8148-4a62-b367-304145c5b054/efc43235-e9ab-4893-9e86-496f99824831"
-					(reference "#PWR065")
+					(reference "#PWR069")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 104.14 78.74 90)
+		(lib_id "Connector:TestPoint_Small")
+		(at 160.02 99.06 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a36d5be5-9833-488a-9833-13f183b2b27d")
-		(property "Reference" "#PWR066"
-			(at 107.95 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 100.33 78.7399 90)
+		(uuid "a40cd432-a17a-4e48-8934-b9e8994c4b24")
+		(property "Reference" "TP5"
+			(at 165.862 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2436,8 +2879,18 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 104.14 78.74 0)
+		(property "Value" "TestPoint_Small"
+			(at 158.75 100.3299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 154.94 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2445,8 +2898,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 104.14 78.74 0)
+		(property "Datasheet" "~"
+			(at 154.94 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2454,8 +2907,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 104.14 78.74 0)
+		(property "Description" "test point"
+			(at 160.02 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2464,12 +2917,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "f201b1ea-2778-47b8-a68d-316c09feedf1")
+			(uuid "9c258562-219b-4b57-92f6-0edfc7bfc257")
 		)
 		(instances
-			(project "CM5IO"
+			(project "PiPortable"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/306ba284-8148-4a62-b367-304145c5b054/efc43235-e9ab-4893-9e86-496f99824831"
-					(reference "#PWR066")
+					(reference "TP5")
 					(unit 1)
 				)
 			)
@@ -2485,7 +2938,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c66c6186-e618-475f-8a87-e4e6c04dd2bd")
-		(property "Reference" "#PWR073"
+		(property "Reference" "#PWR077"
 			(at 132.08 133.35 0)
 			(effects
 				(font
@@ -2535,33 +2988,24 @@
 		(instances
 			(project "CM5IO"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/306ba284-8148-4a62-b367-304145c5b054/efc43235-e9ab-4893-9e86-496f99824831"
-					(reference "#PWR073")
+					(reference "#PWR077")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 104.14 66.04 90)
+		(lib_id "Connector:TestPoint_Small")
+		(at 160.02 73.66 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ce00fe54-5760-4262-9c6f-790f1884accb")
-		(property "Reference" "#PWR064"
-			(at 107.95 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 100.33 66.0399 90)
+		(uuid "d5b46a5a-03a4-4ff0-a1ce-f15ff20fadcd")
+		(property "Reference" "TP24"
+			(at 165.862 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2569,8 +3013,18 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 104.14 66.04 0)
+		(property "Value" "TestPoint_Small"
+			(at 158.75 74.9299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 154.94 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2578,8 +3032,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 104.14 66.04 0)
+		(property "Datasheet" "~"
+			(at 154.94 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2587,74 +3041,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 104.14 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "2a69486f-601c-4f0a-a3b9-da2c3028dd93")
-		)
-		(instances
-			(project "CM5IO"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/306ba284-8148-4a62-b367-304145c5b054/efc43235-e9ab-4893-9e86-496f99824831"
-					(reference "#PWR064")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3V")
-		(at 139.7 50.8 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d35a7f1d-d921-4dff-b2b0-f5b27ea8d090")
-		(property "Reference" "#PWR063"
-			(at 139.7 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 139.7 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 139.7 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 139.7 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 139.7 50.8 0)
+		(property "Description" "test point"
+			(at 160.02 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2663,12 +3051,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "4902d22a-2f3f-4cd1-a41a-698a03c34faa")
+			(uuid "06c2f89f-e84a-401a-ab53-6bb2a4d3e78e")
 		)
 		(instances
-			(project "CM5IO"
+			(project "PiPortable"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/306ba284-8148-4a62-b367-304145c5b054/efc43235-e9ab-4893-9e86-496f99824831"
-					(reference "#PWR063")
+					(reference "TP24")
 					(unit 1)
 				)
 			)
@@ -2684,7 +3072,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d80587eb-216a-4de9-b84f-5dd9625f54a1")
-		(property "Reference" "#PWR067"
+		(property "Reference" "#PWR071"
 			(at 166.37 83.82 0)
 			(effects
 				(font
@@ -2735,7 +3123,7 @@
 		(instances
 			(project "CM5IO"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/306ba284-8148-4a62-b367-304145c5b054/efc43235-e9ab-4893-9e86-496f99824831"
-					(reference "#PWR067")
+					(reference "#PWR071")
 					(unit 1)
 				)
 			)

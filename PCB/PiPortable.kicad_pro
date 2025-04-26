@@ -2,12 +2,224 @@
   "board": {
     "3dviewports": [],
     "design_settings": {
-      "defaults": {},
-      "diff_pair_dimensions": [],
+      "defaults": {
+        "apply_defaults_to_fp_fields": false,
+        "apply_defaults_to_fp_shapes": false,
+        "apply_defaults_to_fp_text": false,
+        "board_outline_line_width": 0.05,
+        "copper_line_width": 0.2,
+        "copper_text_italic": false,
+        "copper_text_size_h": 1.5,
+        "copper_text_size_v": 1.5,
+        "copper_text_thickness": 0.3,
+        "copper_text_upright": false,
+        "courtyard_line_width": 0.05,
+        "dimension_precision": 4,
+        "dimension_units": 3,
+        "dimensions": {
+          "arrow_length": 1270000,
+          "extension_offset": 500000,
+          "keep_text_aligned": true,
+          "suppress_zeroes": false,
+          "text_position": 0,
+          "units_format": 1
+        },
+        "fab_line_width": 0.1,
+        "fab_text_italic": false,
+        "fab_text_size_h": 1.0,
+        "fab_text_size_v": 1.0,
+        "fab_text_thickness": 0.15,
+        "fab_text_upright": false,
+        "other_line_width": 0.1,
+        "other_text_italic": false,
+        "other_text_size_h": 1.0,
+        "other_text_size_v": 1.0,
+        "other_text_thickness": 0.15,
+        "other_text_upright": false,
+        "pads": {
+          "drill": 0.762,
+          "height": 1.524,
+          "width": 1.524
+        },
+        "silk_line_width": 0.1,
+        "silk_text_italic": false,
+        "silk_text_size_h": 0.5,
+        "silk_text_size_v": 0.5,
+        "silk_text_thickness": 0.05,
+        "silk_text_upright": false,
+        "zones": {
+          "min_clearance": 0.5
+        }
+      },
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
       "drc_exclusions": [],
-      "rules": {},
-      "track_widths": [],
-      "via_dimensions": []
+      "meta": {
+        "version": 2
+      },
+      "rule_severities": {
+        "annular_width": "error",
+        "clearance": "error",
+        "connection_width": "warning",
+        "copper_edge_clearance": "error",
+        "copper_sliver": "warning",
+        "courtyards_overlap": "error",
+        "diff_pair_gap_out_of_range": "error",
+        "diff_pair_uncoupled_length_too_long": "error",
+        "drill_out_of_range": "error",
+        "duplicate_footprints": "warning",
+        "extra_footprint": "warning",
+        "footprint": "error",
+        "footprint_symbol_mismatch": "warning",
+        "footprint_type_mismatch": "ignore",
+        "hole_clearance": "error",
+        "hole_near_hole": "error",
+        "holes_co_located": "warning",
+        "invalid_outline": "error",
+        "isolated_copper": "warning",
+        "item_on_disabled_layer": "error",
+        "items_not_allowed": "error",
+        "length_out_of_range": "error",
+        "lib_footprint_issues": "warning",
+        "lib_footprint_mismatch": "warning",
+        "malformed_courtyard": "error",
+        "microvia_drill_out_of_range": "error",
+        "missing_courtyard": "ignore",
+        "missing_footprint": "warning",
+        "net_conflict": "warning",
+        "npth_inside_courtyard": "ignore",
+        "padstack": "warning",
+        "pth_inside_courtyard": "ignore",
+        "shorting_items": "error",
+        "silk_edge_clearance": "warning",
+        "silk_over_copper": "warning",
+        "silk_overlap": "warning",
+        "skew_out_of_range": "error",
+        "solder_mask_bridge": "error",
+        "starved_thermal": "error",
+        "text_height": "warning",
+        "text_thickness": "warning",
+        "through_hole_pad_without_hole": "error",
+        "too_many_vias": "error",
+        "track_dangling": "warning",
+        "track_width": "error",
+        "tracks_crossing": "error",
+        "unconnected_items": "error",
+        "unresolved_variable": "error",
+        "via_dangling": "warning",
+        "zones_intersect": "error"
+      },
+      "rules": {
+        "max_error": 0.005,
+        "min_clearance": 0.15,
+        "min_connection": 0.15,
+        "min_copper_edge_clearance": 0.5,
+        "min_hole_clearance": 0.25,
+        "min_hole_to_hole": 0.25,
+        "min_microvia_diameter": 0.2,
+        "min_microvia_drill": 0.1,
+        "min_resolved_spokes": 2,
+        "min_silk_clearance": 0.0,
+        "min_text_height": 0.8,
+        "min_text_thickness": 0.08,
+        "min_through_hole_diameter": 0.3,
+        "min_track_width": 0.15,
+        "min_via_annular_width": 0.1,
+        "min_via_diameter": 0.5,
+        "solder_mask_to_copper_clearance": 0.0,
+        "use_height_for_length_calcs": true
+      },
+      "teardrop_options": [
+        {
+          "td_onpadsmd": true,
+          "td_onroundshapesonly": false,
+          "td_ontrackend": false,
+          "td_onviapad": true
+        }
+      ],
+      "teardrop_parameters": [
+        {
+          "td_allow_use_two_tracks": true,
+          "td_curve_segcount": 0,
+          "td_height_ratio": 1.0,
+          "td_length_ratio": 0.5,
+          "td_maxheight": 2.0,
+          "td_maxlen": 1.0,
+          "td_on_pad_in_zone": false,
+          "td_target_name": "td_round_shape",
+          "td_width_to_size_filter_ratio": 0.9
+        },
+        {
+          "td_allow_use_two_tracks": true,
+          "td_curve_segcount": 0,
+          "td_height_ratio": 1.0,
+          "td_length_ratio": 0.5,
+          "td_maxheight": 2.0,
+          "td_maxlen": 1.0,
+          "td_on_pad_in_zone": false,
+          "td_target_name": "td_rect_shape",
+          "td_width_to_size_filter_ratio": 0.9
+        },
+        {
+          "td_allow_use_two_tracks": true,
+          "td_curve_segcount": 0,
+          "td_height_ratio": 1.0,
+          "td_length_ratio": 0.5,
+          "td_maxheight": 2.0,
+          "td_maxlen": 1.0,
+          "td_on_pad_in_zone": false,
+          "td_target_name": "td_track_end",
+          "td_width_to_size_filter_ratio": 0.9
+        }
+      ],
+      "track_widths": [
+        0.0,
+        0.15,
+        0.2,
+        0.254,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ],
+      "tuning_pattern_settings": {
+        "diff_pair_defaults": {
+          "corner_radius_percentage": 80,
+          "corner_style": 1,
+          "max_amplitude": 1.0,
+          "min_amplitude": 0.2,
+          "single_sided": false,
+          "spacing": 1.0
+        },
+        "diff_pair_skew_defaults": {
+          "corner_radius_percentage": 80,
+          "corner_style": 1,
+          "max_amplitude": 1.0,
+          "min_amplitude": 0.2,
+          "single_sided": false,
+          "spacing": 0.6
+        },
+        "single_track_defaults": {
+          "corner_radius_percentage": 80,
+          "corner_style": 1,
+          "max_amplitude": 1.0,
+          "min_amplitude": 0.2,
+          "single_sided": false,
+          "spacing": 0.6
+        }
+      },
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        }
+      ],
+      "zones_allow_external_fillets": false
     },
     "ipc2581": {
       "dist": "",
@@ -277,7 +489,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "PiPortable.step",
       "svg": "",
       "vrml": ""
     },
@@ -408,7 +620,7 @@
       "Mux 1"
     ],
     [
-      "49fd40f9-740e-43ea-a3af-ee6faff0ee41",
+      "0e3723ad-803d-4a4c-9d98-3935d8d2e450",
       "Mux 2"
     ],
     [
@@ -416,15 +628,15 @@
       "Port1"
     ],
     [
-      "c1b1378f-c773-4356-a36d-e2f14b894005",
+      "8ea78156-5047-477f-b40c-73aebca4c005",
       "Port2"
     ],
     [
-      "b2a73c75-f4bb-46fc-932b-0895a3eac08d",
+      "e2ae4158-af1d-4b28-b045-b959ea93e640",
       "Port3"
     ],
     [
-      "198e8456-57f2-47f6-9479-a4cde9e319ab",
+      "5be7cbea-6e41-4215-bbe7-f7c68fe65753",
       "Port4"
     ],
     [
@@ -436,84 +648,52 @@
       "IO Ports"
     ],
     [
-      "fd362b65-a5e6-46a3-bbeb-408457c0dc41",
-      "1:8 Mux"
+      "64054eda-8855-42fe-9fd8-32e1cbdf8d31",
+      "1:8 Mux2"
     ],
     [
       "a50be6e1-3df3-4845-8b2b-0220436a0016",
       "1:8 Mux1"
     ],
     [
+      "c6a1977e-eddf-483f-80d1-96cc5fd42913",
+      "1:8 Mux9"
+    ],
+    [
+      "64054eda-8855-42fe-9fd8-32e1cbdf8d31",
+      "1:8 Mux2"
+    ],
+    [
       "a50be6e1-3df3-4845-8b2b-0220436a0016",
       "1:8 Mux1"
     ],
     [
-      "84aad974-ef9c-4804-8e49-1d3189adf002",
-      "1:8 Mux2"
-    ],
-    [
-      "84aad974-ef9c-4804-8e49-1d3189adf002",
-      "1:8 Mux2"
-    ],
-    [
-      "746c12f8-c48e-4179-93c9-b89b83153585",
-      "1:8 Mux3"
-    ],
-    [
-      "746c12f8-c48e-4179-93c9-b89b83153585",
-      "1:8 Mux3"
-    ],
-    [
-      "b8cd267e-7a3c-4226-bf81-30c5170cbdb8",
-      "1:8 Mux4"
-    ],
-    [
-      "b8cd267e-7a3c-4226-bf81-30c5170cbdb8",
-      "1:8 Mux4"
-    ],
-    [
-      "f9066e79-0f6c-4def-a3b2-7a95fd8066b2",
-      "1:8 Mux5"
-    ],
-    [
-      "f9066e79-0f6c-4def-a3b2-7a95fd8066b2",
-      "1:8 Mux5"
-    ],
-    [
-      "e658eeb0-60d4-4743-99a0-2c102b47276f",
-      "1:8 Mux6"
-    ],
-    [
-      "e658eeb0-60d4-4743-99a0-2c102b47276f",
-      "1:8 Mux6"
-    ],
-    [
-      "8849c8b2-532f-4526-a8b0-29c5f60a0d1a",
-      "1:8 Mux7"
-    ],
-    [
-      "8849c8b2-532f-4526-a8b0-29c5f60a0d1a",
-      "1:8 Mux7"
-    ],
-    [
-      "32d26866-f096-4c38-8d24-057bc9f22220",
-      "1:8 Mux8"
-    ],
-    [
-      "32d26866-f096-4c38-8d24-057bc9f22220",
-      "1:8 Mux8"
+      "c6a1977e-eddf-483f-80d1-96cc5fd42913",
+      "1:8 Mux9"
     ],
     [
       "5c226996-df5a-4b36-bca4-a4aff898e28a",
-      "Bucks"
+      "5V Buck"
     ],
     [
       "b8249040-9df0-4eda-9879-c57c0e2ceef1",
       "Power"
     ],
     [
-      "fd362b65-a5e6-46a3-bbeb-408457c0dc41",
-      "1:8 Mux"
+      "32b44888-c9aa-455c-a0e6-0aac059bdd02",
+      "Protector"
+    ],
+    [
+      "a081c805-94e9-4f11-8768-9b09692b3dda",
+      "PD Controller"
+    ],
+    [
+      "5d566fd4-243d-4a51-a420-6419bd3b632d",
+      "Charger"
+    ],
+    [
+      "9d4a3fed-eff9-4b8e-88d2-95e708888a7a",
+      "3.3V Buck"
     ]
   ],
   "text_variables": {}
